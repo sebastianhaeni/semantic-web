@@ -1,0 +1,43 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix lb:    <http://www.example.org/livingbeings#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+lb:Vertebra  a  lb:Feature .
+
+lb:Fur  a       lb:Feature .
+
+lb:livesin  a        rdf:Property ;
+        rdfs:domain  lb:Animal ;
+        rdfs:range   lb:Environment .
+
+lb:Bear  a               rdfs:Class ;
+        rdfs:subClassOf  lb:Mammal ;
+        lb:has           lb:Fur .
+
+lb:Mammal  a             rdfs:Class ;
+        rdfs:subClassOf  lb:Animal ;
+        lb:has           lb:Vertebra .
+
+lb:Whale  a              rdfs:Class ;
+        rdfs:subClassOf  lb:Mammal ;
+        lb:livesin       lb:Water .
+
+lb:has  a            rdf:Property ;
+        rdfs:domain  lb:Mammal ;
+        rdfs:range   lb:Feature .
+
+lb:Fish  a               rdfs:Class ;
+        rdfs:subClassOf  lb:Animal ;
+        lb:livesin       lb:Water .
+
+lb:Animal  a    rdfs:Class .
+
+lb:Water  a     lb:Environment .
+
+lb:Environment  a  rdfs:Class .
+
+lb:Feature  a   rdfs:Class .
+
+lb:Cat  a                rdfs:Class ;
+        rdfs:subClassOf  lb:Mammal ;
+        lb:has           lb:Fur .
