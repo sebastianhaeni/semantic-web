@@ -43,7 +43,7 @@ public class Converter {
         model.write(System.out, parseFormat(outputFormat));
     }
 
-    private static String parseInputFormat(String inputFile) {
+    static String parseInputFormat(String inputFile) {
         return parseFormat(FilenameUtils.getExtension(inputFile).toLowerCase());
     }
 
