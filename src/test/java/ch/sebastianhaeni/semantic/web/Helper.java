@@ -18,8 +18,23 @@ class Helper {
         Query query = Helper.loadQuery(queryFile);
 
         QueryExecution queryExecution = QueryExecutionFactory.create(query, model);
-        ResultSet results = queryExecution.execSelect();
-        ResultSetFormatter.out(System.out, results, query);
+
+        switch (query.getQueryType()) {
+            case Query.QueryTypeAsk:
+                System.out.print(queryExecution.execAsk());
+                break;
+            case Query.QueryTypeSelect:
+                ResultSet results = queryExecution.execSelect();
+                ResultSetFormatter.out(System.out, results, query);
+                break;
+            case Query.QueryTypeConstruct:
+                Model constructedModel = queryExecution.execConstruct();
+                constructedModel.write(System.out, "TTL");
+                break;
+            default:
+                System.out.println("Query type not supported");
+                System.exit(1);
+        }
     }
 
     private static Model loadModel(String file) {

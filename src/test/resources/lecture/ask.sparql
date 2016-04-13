@@ -1,0 +1,8 @@
+PREFIX store: <http://cdmusic.org/store#>
+PREFIX cdmusic: <http://cdmusic.org/cds#>
+PREFIX artist: <http://cdmusic.org/artist#>
+
+ASK
+{
+    ?x cdmusic:album ?album .
+}

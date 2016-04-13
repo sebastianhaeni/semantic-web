@@ -1,0 +1,11 @@
+PREFIX store: <http://cdmusic.org/store#>
+PREFIX cdmusic: <http://cdmusic.org/cds#>
+PREFIX artist: <http://cdmusic.org/artist#>
+PREFIX myns: <http://example.org/mine#>
+
+CONSTRUCT {
+    artist:name myns:FN ?name
+}
+WHERE {
+    ?x cdmusic:name ?name .
+}

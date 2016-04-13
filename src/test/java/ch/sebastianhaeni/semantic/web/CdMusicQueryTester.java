@@ -29,4 +29,14 @@ public class CdMusicQueryTester {
         Helper.executeQueryOnModel("lecture/cdmusic.ttl", "lecture/query5.sparql");
     }
 
+    @Test
+    public void ask() {
+        Helper.executeQueryOnModel("lecture/cdmusic.ttl", "lecture/ask.sparql");
+    }
+
+    @Test
+    public void construct() {
+        Helper.executeQueryOnModel("lecture/cdmusic.ttl", "lecture/construct.sparql");
+    }
+
 }
