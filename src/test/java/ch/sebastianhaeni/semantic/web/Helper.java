@@ -18,6 +18,10 @@ class Helper {
         Query query = Helper.loadQuery(queryFile);
 
         QueryExecution queryExecution = QueryExecutionFactory.create(query, model);
+        execute(query, queryExecution);
+    }
+
+    private static void execute(Query query, QueryExecution queryExecution) {
 
         switch (query.getQueryType()) {
             case Query.QueryTypeAsk:
@@ -66,5 +70,12 @@ class Helper {
         String queryString = new String(encoded);
 
         return QueryFactory.create(queryString);
+    }
+
+    static void executeQueryOnEndpoint(String endpointUrl, String queryFile) {
+        Query query = Helper.loadQuery(queryFile);
+        QueryExecution queryExecution = QueryExecutionFactory.sparqlService(endpointUrl, query);
+
+        execute(query, queryExecution);
     }
 }
