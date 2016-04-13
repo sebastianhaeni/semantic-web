@@ -1,0 +1,12 @@
+PREFIX store: <http://cdmusic.org/store#>
+PREFIX cdmusic: <http://cdmusic.org/cds#>
+PREFIX artist: <http://cdmusic.org/artist#>
+
+SELECT ?artistname (COUNT(?x) AS ?cdCount)
+WHERE
+{
+    ?x cdmusic:artist ?artist .
+    ?x cdmusic:year ?year .
+    ?artist cdmusic:name ?artistname .
+}
+GROUP BY ?artistname

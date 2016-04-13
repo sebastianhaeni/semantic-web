@@ -1,0 +1,12 @@
+PREFIX store: <http://cdmusic.org/store#>
+PREFIX cdmusic: <http://cdmusic.org/cds#>
+PREFIX artist: <http://cdmusic.org/artist#>
+
+SELECT ?artistname
+WHERE
+{
+    ?x cdmusic:artist ?artist .
+    ?x cdmusic:year ?year .
+    ?artist cdmusic:name ?artistname .
+    FILTER (?year >= 2009)
+}
