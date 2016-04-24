@@ -1,0 +1,23 @@
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT
+    ?name
+    ?genderLabel
+    ?relatives
+WHERE {
+    ?character dbp:name ?name .
+    FILTER(LANG(?name) = "en")
+
+    OPTIONAL {
+        ?character dbp:gender ?gender .
+        ?gender rdfs:label ?genderLabel .
+        FILTER(LANG(?genderLabel) = "en")
+    }
+
+    OPTIONAL { ?character dbp:relatives ?relatives . }
+
+    ?character dcterms:subject
+        <http://dbpedia.org/resource/Category:The_Simpsons_characters> .
+}
