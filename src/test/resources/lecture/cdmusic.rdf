@@ -1,0 +1,68 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:store="http://cdmusic.org/store#"
+    xmlns:cdmusic="http://cdmusic.org/cds#"
+    xmlns:artist="http://cdmusic.org/artist#">
+  <rdf:Description rdf:about="http://cdmusic.org/store#item1">
+    <store:available rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</store:available>
+    <store:price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</store:price>
+    <cdmusic:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</cdmusic:year>
+    <cdmusic:album>Sticky Fingers</cdmusic:album>
+    <cdmusic:artist>
+      <rdf:Description rdf:about="http://cdmusic.org/artist#rollingstones">
+        <cdmusic:name>The Rolling Stones</cdmusic:name>
+      </rdf:Description>
+    </cdmusic:artist>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdmusic.org/store#item2">
+    <store:available rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</store:available>
+    <store:price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</store:price>
+    <cdmusic:album>Aftermath</cdmusic:album>
+    <cdmusic:artist rdf:resource="http://cdmusic.org/artist#rollingstones"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdmusic.org/store#item3">
+    <store:available rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</store:available>
+    <store:price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</store:price>
+    <cdmusic:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1985</cdmusic:year>
+    <cdmusic:album>The Dream of the Blue Turtles</cdmusic:album>
+    <cdmusic:artist>
+      <rdf:Description rdf:about="http://cdmusic.org/artist#sting">
+        <cdmusic:name>Sting</cdmusic:name>
+      </rdf:Description>
+    </cdmusic:artist>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdmusic.org/store#item4">
+    <store:available rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</store:available>
+    <store:price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</store:price>
+    <cdmusic:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1977</cdmusic:year>
+    <cdmusic:album>Rivers of Tears</cdmusic:album>
+    <cdmusic:artist>
+      <rdf:Description rdf:about="http://cdmusic.org/artist#ericclapton">
+        <cdmusic:name>Eric Clapton</cdmusic:name>
+      </rdf:Description>
+    </cdmusic:artist>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdmusic.org/store#item5">
+    <store:available rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</store:available>
+    <store:price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</store:price>
+    <cdmusic:album>Not to Late</cdmusic:album>
+    <cdmusic:artist>
+      <rdf:Description rdf:about="http://cdmusic.org/artist#norahjones">
+        <cdmusic:name>Norah Jones</cdmusic:name>
+      </rdf:Description>
+    </cdmusic:artist>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdmusic.org/store#item6">
+    <store:available rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</store:available>
+    <cdmusic:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</cdmusic:year>
+    <cdmusic:album>The Fall</cdmusic:album>
+    <cdmusic:artist rdf:resource="http://cdmusic.org/artist#norahjones"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdmusic.org/store#item7">
+    <store:available rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</store:available>
+    <store:price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</store:price>
+    <cdmusic:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</cdmusic:year>
+    <cdmusic:album>Live in Berlin</cdmusic:album>
+    <cdmusic:artist rdf:resource="http://cdmusic.org/artist#sting"/>
+  </rdf:Description>
+</rdf:RDF>
